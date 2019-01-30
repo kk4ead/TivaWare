@@ -40,6 +40,9 @@
 #ifndef __TM4C123GH6PM_H__
 #define __TM4C123GH6PM_H__
 
+// Added on 1/30/2019 by Clara Short <clarity@utexas.edu>
+#include <stdint.h>
+
 //*****************************************************************************
 //
 // Interrupt assignments
