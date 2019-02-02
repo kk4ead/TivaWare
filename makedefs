@@ -97,6 +97,7 @@ AFLAGS=-mthumb \
 
 #
 # The flags passed to the compiler.
+# Modified February 1, 2019 by Clara Short <clarity@utexas.edu>.
 #
 CFLAGS=-mthumb             \
        ${CPU}              \
@@ -107,6 +108,9 @@ CFLAGS=-mthumb             \
        -std=c99            \
        -Wall               \
        -pedantic           \
+       -Wno-unused-variable\
+       -Wno-unused-but-set-variable\
+       -Werror             \
        -DPART_${PART}      \
        -c
 
