@@ -108,9 +108,12 @@ CFLAGS=-mthumb             \
        -std=c99            \
        -Wall               \
        -pedantic           \
+       -Wextra             \
+       -Werror             \
+       -Wno-old-style-declaration\
+       -Wno-unused-parameter\
        -Wno-unused-variable\
        -Wno-unused-but-set-variable\
-       -Werror             \
        -DPART_${PART}      \
        -c
 

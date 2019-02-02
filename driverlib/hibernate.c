@@ -2132,7 +2132,12 @@ HibernateTamperIODisable(uint32_t ui32Input)
     //
     // Clear the I/O enable bit.
     //
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wshift-negative-value"
+    // 2019-02-02, Clara Short <clarity@utexas.edu>:
+    // disable spurious "left-shift of negative value" warning
     HWREG(HIB_TPIO) &= ((~HIB_TPIO_EN0) << (ui32Input << 3));
+#pragma GCC diagnostic pop
 
     //
     // Wait for write completion.
